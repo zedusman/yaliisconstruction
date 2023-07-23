@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaliis</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/78dd0bcd51.js" crossorigin="anonymous"></script>
+
+    <!-- style -->
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            /* background-image: url(byyaliis.PNG), #000; */
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            color: #000;
+            background-blend-mode: darken;
+            filter: blur(10px);
+            /* Set the background image URL */
+            background-image: url("byyaliis.PNG");
+            background-color: #b38a28;
+        }
+
+        .container {
+            width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .top p{
+            font-size: 25px;
+            width: 160px;
+            text-align: center;
+            color: #b38a28;
+        }
+        .top{
+            display: flex;
+            align-items: center;
+            font-weight: 900;
+        }
+        hr{
+            width: 100px;
+            border-radius: 5px;
+            margin: 0 15px;
+        }
+        h1{
+            font-size: 60px;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: 20px;
+            color: #b38a28;
+        }
+        h3{
+            margin-bottom: 10px;
+            color: #b38a28;
+        }
+        .social-icons{
+            margin: 20px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        a{
+            color: #b38a28;
+        }
+        i{
+           font-size: 35px;
+            margin: 10px;
+        }
+        p{
+            color: #b38a28;
+        }
+           /* Progress Bar */
+           .progress-wrapper{
+            width: 100%;
+            background-color: #000;
+            display: flex;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            height: 10px;
+        }
+        .progress{
+            width: 0%;
+            background-color: #b38a28;
+            border-radius: 5px;
+            height: 10px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .progress span{
+            position: relative;
+            /* color: white; */
+            font-weight: 800;
+            top: 15px;
+            left: 25px;
+        }
+
+        /* Rest of your CSS styles here */
+
+        @media screen and (max-width: 640px) {
+            .container {
+                width: 90%;
+            }
+            h1{
+                font-size:50px;
+            }
+            i{
+                font-size: 25px;
+
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            h1{
+                font-size: 20px;
+                
+            }
+        }
+    
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px ;
+
+}
+.copyright i{
+    color: #b38a28;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center; /* Set your preferred background color */
+  padding: 20px; /* Adjust the padding as needed */
+}
+    </style>
+    <!-- style -->
+
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <!-- Your HTML content here -->
+        <div class="top">
+            <hr>
+            <p>Yaliis</p>
+            <hr>
+        </div>
+        <h1>Under Construction</h1>
+        <p>We're cooking something... <br> Stay Tuned!</p>
+        <h3>progress</h3>
+       <!-- progress bar -->
+    <div class="progress-wrapper">
+        <div class="progress">
+            <span>80%</span>
+        </div>
+    </div>
+
+    <!-- social icons -->
+    <div class="social-icons">
+        <a href="https://www.instagram.com/yaliis_/"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <footer class="footer">
+    <div class="copyright">
+        <p><i class="fa-regular fa-copyright"></i>Z-Digital Solutions</p>
+    </div>
+    </footer>
+
+    <!-- JavaScript for progress bar -->
+    <script>
+        const progress = document.querySelector('.progress');
+        const progress_percentage = document.querySelector('.progress span');
+
+        let per = 0;
+        function progressload() {
+            if (per >= 80) {
+                progress.style.width = '80%';
+                progress_percentage.innerHTML = '80%';
+            } else {
+                progress.style.width = per + '%';
+                progress_percentage.innerHTML = per + '%';
+            }
+            per++;
+        }
+        setInterval(progressload, 90);
+    </script>
+</body>
+</html>
